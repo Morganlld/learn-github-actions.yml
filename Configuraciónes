@@ -1,0 +1,73 @@
+const comDtsFreefirethSensitivity = 'com.dts.freefireth~[sensitivity]';
+
+const dpiScreen = 'dpi.screen'; const aimbotFf = 'aimbot.ff;
+
+const sensitivityWeapon = 9000;
+
+const aimlockEnemy = 'aimlock.enemy';
+
+const aimfov90 = 'aimfov.90';
+
+const aimbotFfOn = 'aimbot.ff;
+
+// Variables globales
+
+let player = null; let head = null; let aimlockEnabled = true; let aimfov = 90;
+
+let enemy = null;
+
+let sensitivity = 9000;
+
+// Funciones
+
+function calculateAimTarget() {
+
+const dx = target.x player.x;
+
+const dy = target.y - player.y;
+
+return {x: targetX, y: targetY };
+
+}
+
+function aimAtTarget(target) {
+
+const dx = target.x - player.x; const dy = target.y - player.y;
+
+player.rotation = Math.atan2(dy, dx); }
+
+function aimbot() {
+
+if (aimlockEnabled) { const target = calculateAimTarget(); aimAtTarget(target);
+
+} requestAnimationFrame(aimbot);
+
+}
+
+function enableAimHeadshot() {
+
+// Implementación de la función {
+
+function enableAimlock() {
+
+aimlockEnabled = true; }
+
+function disableAimlock() { aimlockEnabled = false;
+
+}
+
+// Inicialización
+
+function init() {
+
+player = document. t.getElementById('player'); head = document.getElementById('head');
+
+enemy = document.getElementById('enemy');
+
+// JEXE EL REY
+
+// Lógica del script
+
+init(); aimbot();
+
+{
